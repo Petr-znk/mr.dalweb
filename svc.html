@@ -54,18 +54,24 @@
       background: rgba(255,255,255,0.2);
     }
 
+    /* herní plocha s obrázkem */
     .game-box {
       width: min(75vw, 700px);
       aspect-ratio: 4 / 3;
-      background: white;
       border-radius: 8px;
       overflow: hidden;
+      position: relative;
+      background: url('svc.png') center/cover no-repeat;
     }
 
     iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       border: none;
+      display: none;
     }
   </style>
 </head>
@@ -84,13 +90,20 @@
 
   <script>
     function startGame() {
-      document.getElementById('gameFrame').src = 'Bez, oli, bez.html';
+      const frame = document.getElementById('gameFrame');
+      frame.style.display = 'block';
+
+      // ⚠️ DOPORUČENÍ: změň název souboru hry např. na svcgame.html
+      frame.src = 'svcgame.html';
     }
 
     function stopGame() {
-      document.getElementById('gameFrame').src = '';
+      const frame = document.getElementById('gameFrame');
+      frame.src = '';
+      frame.style.display = 'none';
     }
   </script>
 
 </body>
 </html>
+
