@@ -14,11 +14,16 @@
       font-family: Arial, sans-serif;
     }
 
-    /* tlačítko vpravo nahoře */
-    .top-button {
+    /* tlačítka vpravo nahoře */
+    .top-buttons {
       position: fixed;
       top: 20px;
       right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .top-button {
       padding: 10px 18px;
       background: rgba(255,255,255,0.08);
       color: white;
@@ -42,7 +47,10 @@
 </head>
 <body>
 
-  <a href="svc.html" class="top-button">S vs C</a>
+  <div class="top-buttons">
+    <a href="svc.html" class="top-button">S vs C</a>
+    <a href="https://cs.pornhub.com" class="top-button">hra2</a>
+  </div>
 
   <img src="logo.png" alt="logo">
 
